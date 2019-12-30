@@ -68,7 +68,7 @@ class Post(models.Model):
     author = models.ForeignKey(User,verbose_name='作者', on_delete=models.CASCADE)
 
     # 阅读量
-    views = models.PositiveIntegerField(default=0,editable=False)
+    views = models.PositiveIntegerField(default=0, editable=False)
 
     class Meta:
         verbose_name = '文章'

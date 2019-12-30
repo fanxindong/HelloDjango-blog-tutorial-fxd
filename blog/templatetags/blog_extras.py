@@ -1,4 +1,6 @@
 from django import template
+from django.db.models import Count
+
 from ..models import Post, Category, Tag
 
 register = template.Library()
@@ -18,18 +20,31 @@ def show_archieves(context):
     }
 
 # 定义“分类”模板标签
-@register.inclusion_tag('blog/inclusions/_categories.html',takes_context=True)
+@register.inclusion_tag('blog/inclusions/_categories.html', takes_context=True)
+# def show_categories(context):
+#     return {
+#         'categories_list': Category.objects.all()
+#     }
 def show_categories(context):
+    category_list = Category.objects.annotate(num_posts=Count('post')).filter(num_posts__gt=0)
     return {
-        'categories_list': Category.objects.all()
+        'categories_list': category_list,
     }
+
+
+
+
 
 # 定义“标签云”模板标签
 @register.inclusion_tag('blog/inclusions/_tages.html', takes_context=True)
+# def show_tages(context):
+#     return {
+#         'tag_list': Tag.objects.all()
+#     }
 def show_tages(context):
+    tag_list = Tag.objects.annotate(num_posts=Count('post')).filter(num_posts__gt=0)
     return {
-        'tag_list': Tag.objects.all()
+        'tag_list': tag_list
     }
-
 
 
