@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'pure_pagination',
+    # 'pure_pagination',
     
     'blog.apps.BlogConfig',  #注册blog应用
     'comments.apps.CommentsConfig',  # 注册comments应用
@@ -129,9 +129,9 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# 分页设置
-PAGINATION_SETTINGS = {
-    'PAGE_RANGE_DISPLAYED': 2,
-    'MARGIN_PAGES_DISPLAYED': 1,
-    'SHOW_FIRST_PAGE_WHEN_INVALID': True,
-}
+# # 分页设置
+# PAGINATION_SETTINGS = {
+#     'PAGE_RANGE_DISPLAYED': 2,
+#     'MARGIN_PAGES_DISPLAYED': 1,
+#     'SHOW_FIRST_PAGE_WHEN_INVALID': True,
+# }

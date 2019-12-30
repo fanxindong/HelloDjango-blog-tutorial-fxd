@@ -14,7 +14,8 @@ from django.views.generic import ListView, DetailView
 #     """定义博客主页视图"""
 #     post_list = Post.objects.all()#.order_by('-created_time')
 #     return render(request, 'blog/index.html', context={'post_list': post_list})
-class IndexView(PaginationMixin, ListView):
+# class IndexView(PaginationMixin, ListView):
+class IndexView(ListView):
     model = Post
     template_name = 'blog/index.html'
     context_object_name = 'post_list'
