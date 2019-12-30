@@ -31,13 +31,6 @@
             "index": "pypi",
             "version": "==3.0.1"
         },
-        "django-pure-pagination": {
-            "hashes": [
-                "sha256:02b42561b8afb09f1fb6ac6dc81db13374f5f748640f31c8160a374274b54713"
-            ],
-            "index": "pypi",
-            "version": "==0.3.0"
-        },
         "faker": {
             "hashes": [
                 "sha256:202ad3b2ec16ae7c51c02904fb838831f8d2899e61bf18db1e91a5a582feab11",
