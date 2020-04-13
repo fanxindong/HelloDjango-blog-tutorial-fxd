@@ -3,4 +3,4 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.fanxindong.com']
+ALLOWED_HOSTS = ['.fanxindong.com']
